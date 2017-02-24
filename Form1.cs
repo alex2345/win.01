@@ -394,10 +394,9 @@ namespace win._01
         }
 
         private void seed(out int s)//[4-39] 
-        {
+        { //see [4-39] of "Visual C# 2015" for detail
             Random r = new Random();
             s = r.Next(1, 47);
-
         }  
         private void button13_Click(object sender, EventArgs e)
         {
