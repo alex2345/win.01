@@ -397,6 +397,7 @@ namespace win._01
         {
             Random r = new Random();
             s = r.Next(1, 47);
+
         }  
         private void button13_Click(object sender, EventArgs e)
         {
