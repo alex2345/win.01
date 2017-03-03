@@ -473,6 +473,66 @@ namespace win._01
             z=addout(out x, out y);
             MessageBox.Show( "z = " + z.ToString());
         }
+
+        private static void sub(ref int[] ary2)
+        {
+            for (int i = 0; i < 3; i++)  MessageBox.Show(ary2[i].ToString());
+        }
+        private void button18_Click(object sender, EventArgs e)
+        {
+            int[] ary = new int[] { 1, 2, 3, 4, 5 };
+            sub(ref ary);
+        }
+        class A
+        {   private static int age = 29;
+            public static string name = "john";
+            protected internal  int money = 22000;
+        }
+
+        class B : A
+        {   private int no = 4;
+            public int get_higher_money()
+            {
+                money = 44000;
+                return money;
+            }
+        }
+        private void button19_Click(object sender, EventArgs e)
+        {
+            B peter = new B(); int m; 
+            
+            MessageBox.Show( "class1 name=" + A.name);
+            MessageBox.Show("peter's original money =" + peter.money.ToString ()  );
+            //MessageBox.Show(class1.money.ToString());  can't do it
+            m = peter.get_higher_money();   MessageBox.Show("peter's current money =" + m.ToString());
+
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            // MessageBox.Show("Paint");
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            MessageBox.Show("Resize");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://tw.stock.yahoo.com/");
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            string[] str = new string[] { "111", "222", "333" };
+            textBox1.Lines = str;
+
+            MessageBox.Show("Enter");
+
+            lblA.Text = textBox1.Lines[0];
+            lblB.Text = textBox1.Lines[1];
+        }
         //
     }//public partial class Form1 : Form
 }//namespace win._01

@@ -51,6 +51,12 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button20 = new System.Windows.Forms.Button();
+            this.lblA = new System.Windows.Forms.Label();
+            this.lblB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,9 +234,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(360, 292);
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(293, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
+            this.label1.Size = new System.Drawing.Size(64, 24);
             this.label1.TabIndex = 19;
             this.label1.Text = "label1";
             // 
@@ -274,11 +281,78 @@
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(602, 127);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(101, 23);
+            this.button18.TabIndex = 23;
+            this.button18.Text = "&ref array";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(602, 156);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(101, 23);
+            this.button19.TabIndex = 24;
+            this.button19.Text = "&Higer money";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(613, 200);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(79, 15);
+            this.linkLabel1.TabIndex = 25;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Yahoo!股市";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(603, 232);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(101, 23);
+            this.button20.TabIndex = 26;
+            this.button20.Text = "&2 labels";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // lblA
+            // 
+            this.lblA.AutoSize = true;
+            this.lblA.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblA.Location = new System.Drawing.Point(603, 263);
+            this.lblA.Name = "lblA";
+            this.lblA.Size = new System.Drawing.Size(41, 22);
+            this.lblA.TabIndex = 27;
+            this.lblA.Text = "lblA";
+            // 
+            // lblB
+            // 
+            this.lblB.AutoSize = true;
+            this.lblB.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblB.Location = new System.Drawing.Point(603, 285);
+            this.lblB.Name = "lblB";
+            this.lblB.Size = new System.Drawing.Size(39, 22);
+            this.lblB.TabIndex = 28;
+            this.lblB.Text = "lblB";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 322);
+            this.ClientSize = new System.Drawing.Size(740, 322);
+            this.Controls.Add(this.lblB);
+            this.Controls.Add(this.lblA);
+            this.Controls.Add(this.button20);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.button19);
+            this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -306,6 +380,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Win.01";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -337,6 +413,12 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Label lblA;
+        private System.Windows.Forms.Label lblB;
     }
 }
 
