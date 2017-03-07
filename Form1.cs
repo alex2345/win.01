@@ -19,6 +19,10 @@ namespace win._01
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            listBox1.Items.Add("333");
+            listBox1.Items.Add("111");
+            listBox1.Items.Add("222");
+
             //string s1; // unicode 轉換 = http://www.ifreesite.com/unicode-ascii-ansi.htm
             //s1 = "\u4e00\u4e01\u4e02\u4e03"; //一丁丂七
             //textBox1.Text = s1;
@@ -418,7 +422,9 @@ namespace win._01
                 }
                 label1.Text += numbers[i].ToString() + ", ";
             }
+            label1.Text = label1.Text.Substring(0, label1.Text.Length - 2);
         }
+
 
         private void button14_Click(object sender, EventArgs e)
         {   //The menu for one week 一週菜單 (陣列練習)
@@ -532,6 +538,32 @@ namespace win._01
 
             lblA.Text = textBox1.Lines[0];
             lblB.Text = textBox1.Lines[1];
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            //作業  學員訂便當系統
+            string[] ary = new string[listBox1.Items.Count];
+
+            //將物件 listBox1 所有項目(.Items) 複製到陣列 ary, 起始位址 0
+            listBox1.Items.CopyTo(ary, 0);
+
+            //將陣列 ary 排序;  將陣列 ary 反轉;
+            Array.Sort(ary); Array.Reverse(ary);
+
+            //列印陣列 ary 之每個成員
+            foreach (string p in ary) MessageBox.Show(p);
+
+            //將物件 listBox1 所有項目(.Items) 清除
+            listBox1.Items.Clear();
+
+            //將陣列 ary 之每個成員 加入物件 listBox1
+            listBox1.Items.AddRange(ary);
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2(); f2.Show();
         }
         //
     }//public partial class Form1 : Form

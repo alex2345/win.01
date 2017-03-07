@@ -57,6 +57,9 @@
             this.button20 = new System.Windows.Forms.Button();
             this.lblA = new System.Windows.Forms.Label();
             this.lblB = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -342,11 +345,42 @@
             this.lblB.TabIndex = 28;
             this.lblB.Text = "lblB";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(21, 335);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(466, 94);
+            this.listBox1.TabIndex = 29;
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(496, 335);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(101, 23);
+            this.button21.TabIndex = 18;
+            this.button21.Text = "&CopyTo array";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(493, 364);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(101, 23);
+            this.button22.TabIndex = 30;
+            this.button22.Text = "學員訂便當";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 322);
+            this.ClientSize = new System.Drawing.Size(717, 439);
+            this.Controls.Add(this.button22);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblB);
             this.Controls.Add(this.lblA);
             this.Controls.Add(this.button20);
@@ -358,6 +392,7 @@
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.button21);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.textBox3);
@@ -419,6 +454,9 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Label lblA;
         private System.Windows.Forms.Label lblB;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
     }
 }
 
