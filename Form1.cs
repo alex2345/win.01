@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace win._01
 {
@@ -19,6 +20,13 @@ namespace win._01
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            pictureBox1.Image = Image.FromFile(@"..\..\Images\火隱.jpg");
+            // 執行路徑 E:\106ERPA06\a_蔡宏松老師\win.01\bin\Debug\
+            // 圖片路徑 E:\106ERPA06\a_蔡宏松老師\win.01\images\
+            // 結論：必須回溯兩層到 E:\106ERPA06\a_蔡宏松老師\win.01\
+            // 或是直接把圖片存檔到 E:\106ERPA06\a_蔡宏松老師\win.01\bin\Debug\
+            // 然後下達 pictureBox1.Image = Image.FromFile(@".\火隱之一.jpg");
+
             listBox1.Items.Add("333");
             listBox1.Items.Add("111");
             listBox1.Items.Add("222");
@@ -564,6 +572,53 @@ namespace win._01
         private void button22_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2(); f2.Show();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            string s; //必須手動選定：專案→加入參考 [v] Microsoft.VisualBasic
+            s = Microsoft.VisualBasic.Interaction.InputBox("Prompt text", "This is title text", "default value");
+            MessageBox.Show(s);
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            checkedListBox1.CheckOnClick = true;
+            string[] ary = new string[] { "慢跑", "游泳", "登山", "體操" };
+            checkedListBox1.Items.AddRange(ary);
+        }
+
+        int i = 0; bool runner = false;
+        private void button25_Click(object sender, EventArgs e)
+        {
+            // 循序播放
+            int cnt = imageList1.Images.Count;
+            if (i > cnt - 1) i = 0;
+            pictureBox1.Image = imageList1.Images[i];
+            button25.Text = imageList1.Images.Keys[i].ToString();
+            i++;
+
+            //// 隨機播放
+            //Random r = new Random(); int n;
+            //n = r.Next(0, imageList1.Images.Count);
+            //pictureBox1.Image = imageList1.Images[n];
+            //button25.Text = imageList1.Images.Keys[n].ToString();
+
+            if (i > 4) { runner = true; i = 0; } // 是否播放 慢跑動畫
+        }
+
+        int m = 5; int timer_counter = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (runner) // 播放 慢跑動畫
+            {
+                if (m > 8) m = 5; pictureBox1.Image = imageList1.Images[m++];
+                timer_counter++;
+            }
+
+            //偵測 [播放 慢跑動畫] 經過時間 30 * 100 = 3000 ms 
+            if (timer_counter >= 30) { timer_counter = 0; runner = false; }
+            
         }
         //
     }//public partial class Form1 : Form

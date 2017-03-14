@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -60,7 +62,15 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button24 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button25 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -238,7 +248,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(293, 290);
+            this.label1.Location = new System.Drawing.Point(302, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 24);
             this.label1.TabIndex = 19;
@@ -349,9 +359,9 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(21, 335);
+            this.listBox1.Location = new System.Drawing.Point(306, 335);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(466, 94);
+            this.listBox1.Size = new System.Drawing.Size(181, 79);
             this.listBox1.TabIndex = 29;
             // 
             // button21
@@ -374,11 +384,84 @@
             this.button22.UseVisualStyleBackColor = true;
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(493, 393);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(101, 23);
+            this.button23.TabIndex = 31;
+            this.button23.Text = "&InputBox";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 332);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(179, 84);
+            this.checkedListBox1.TabIndex = 32;
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(10, 303);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(101, 23);
+            this.button24.TabIndex = 33;
+            this.button24.Text = "&CheckOnClick";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(197, 335);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(197, 306);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(81, 23);
+            this.button25.TabIndex = 35;
+            this.button25.Text = "&ImageList";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "papi.jpg");
+            this.imageList1.Images.SetKeyName(1, "火隱.jpg");
+            this.imageList1.Images.SetKeyName(2, "食神.jpg");
+            this.imageList1.Images.SetKeyName(3, "路虎.jpg");
+            this.imageList1.Images.SetKeyName(4, "夏帆.jpg");
+            this.imageList1.Images.SetKeyName(5, "RUNNER1.GIF");
+            this.imageList1.Images.SetKeyName(6, "RUNNER2.GIF");
+            this.imageList1.Images.SetKeyName(7, "RUNNER3.GIF");
+            this.imageList1.Images.SetKeyName(8, "RUNNER4.GIF");
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 439);
+            this.ClientSize = new System.Drawing.Size(716, 429);
+            this.Controls.Add(this.button25);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button24);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblB);
@@ -418,6 +501,7 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,6 +541,13 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button25;
+        public System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
