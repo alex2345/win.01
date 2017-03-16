@@ -153,9 +153,28 @@ namespace win._01
         }//private void button5_Click(object sender, EventArgs e)
 
         private void button6_Click(object sender, EventArgs e)// RichTextBox
-        {     richTextBox1.Text = "(1,1)" + "\t" + "(1,2)" + '\t' + "(1,3)" + "\n" +
-                    "(2,1)" + "\t" + "(2,2)" + '\t' + "(2,3)";
- 
+        {     
+            richTextBox1.Text = "(1,1)" + "\t" + "(1,2)" + '\t' + "(1,3)" + "\n" 
+                              + "(2,1)" + "\t" + "(2,2)" + '\t' + "(2,3)";
+
+            //string[] 與 richTextBox 的溝通 (大同世界)
+            string[] str = new string[] { "早安", "午安", "晚安" };
+            richTextBox1.Lines = str;
+
+            //listBox 與 richTextBox 的溝通 (大同世界)
+            listBox1.Items.AddRange(richTextBox1.Lines); 
+
+            //建立相同成員個數之動態陣列
+            string[] ary = new string[richTextBox1.Lines.Count()];
+            richTextBox1.Lines.CopyTo(ary, 0); //copy to array
+
+            //陣列排序
+            Array.Sort(ary);
+            foreach (string p in ary)
+            {
+                MessageBox.Show(p);
+            }
+
         }
 
         private void CreateMyListView()
