@@ -69,6 +69,7 @@
             this.button25 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button26 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -452,11 +453,22 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(625, 291);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(101, 23);
+            this.button26.TabIndex = 36;
+            this.button26.Text = "按鍵控制";
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 429);
+            this.ClientSize = new System.Drawing.Size(737, 429);
+            this.Controls.Add(this.button26);
             this.Controls.Add(this.button25);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button24);
@@ -548,6 +560,7 @@
         private System.Windows.Forms.Button button25;
         public System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button26;
     }
 }
 

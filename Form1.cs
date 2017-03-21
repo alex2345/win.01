@@ -20,6 +20,13 @@ namespace win._01
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            richTextBox1.Enabled = false;
+            listBox1.Enabled = false;
+            checkedListBox1.Enabled = false;
+
             pictureBox1.Image = Image.FromFile(@"..\..\Images\火隱.jpg");
             // 執行路徑 E:\106ERPA06\a_蔡宏松老師\win.01\bin\Debug\
             // 圖片路徑 E:\106ERPA06\a_蔡宏松老師\win.01\images\
@@ -637,7 +644,12 @@ namespace win._01
 
             //偵測 [播放 慢跑動畫] 經過時間 30 * 100 = 3000 ms 
             if (timer_counter >= 30) { timer_counter = 0; runner = false; }
-            
+
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3(); f3.Show();
         }
         //
     }//public partial class Form1 : Form
